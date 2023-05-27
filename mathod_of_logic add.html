@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add+multipli
+
+    </title>
+</head>
+<body>
+<label >number1</label>
+<input type="text" id="number1"> <br> <br>
+<label >number2</label>
+<input type="text" id="number2">
+<br>
+<br>
+
+<input type="button" value="+ add" id="btnOk1" onclick="b1()" style="background-color: blueviolet;">
+
+<input type="button" value="- subcript" id="btnOk2" onclick="b2()" style="background-color: deeppink">
+
+<input type="button" value="* multipli" id="btnOk3" onclick="b3()" style="background-color:burlywood">
+
+<input type="button" value="/ Division" id="btnOk4" onclick="b4()" style="background-color:aqua;">
+
+<input type="button" value="% persent" id="btnOk4" onclick="b5()" style="background-color:aqua;">
+
+<input type="button" value="^ power" id="btnOk4" onclick="b6()" style="background-color:aqua;"><br> <br>
+
+<textarea name="" id="result" cols="30" rows="2">result=</textarea>
+
+
+   <script>
+    // let btnOk=document.getElementById('btnOk1');
+    // let btnOk=document.getElementById('btnOk2');
+    // let btnOk=document.getElementById('btnOk3');
+    // let btnOk=document.getElementById('btnOk4');
+
+    //     let name=document.getElementById("number1");
+    //     let name=document.getElementById("number2");
+
+    function b1(){
+
+        let n1=document.getElementById("number1").value;
+        let n2=document.getElementById("number2").value;
+        let result=parseInt(n1)+parseInt(n2);
+
+        document.getElementById("result").innerHTML="result= "+result;
+    }
+    function b2(){
+        let n1=document.getElementById("number1").value;
+        let n2=document.getElementById("number2").value;
+        let result=n1-n2;
+
+        document.getElementById("result").innerHTML="result= "+result;
+    }
+    function b3(){
+        let n1=document.getElementById("number1").value;
+        let n2=document.getElementById("number2").value;
+        let result=n1*n2;
+
+        document.getElementById("result").innerHTML="result= "+result;
+    }
+    function b4(){
+        let n1=document.getElementById("number1").value;
+        let n2=document.getElementById("number2").value;
+        let result=n1/n2;
+
+        document.getElementById("result").innerHTML="result= "+result;
+    }
+    function b5(){
+        let n1=document.getElementById("number1").value;
+        let n2=document.getElementById("number2").value;
+        // let result=n1%n2;
+        let result=n1*n2/100;
+
+        document.getElementById("result").innerHTML="result= "+result;
+    }
+    function b6(){
+        let n1=document.getElementById("number1").value;
+        let n2=document.getElementById("number2").value;
+      
+        let result=n1*n2/100;
+
+        document.getElementById("result").innerHTML="result= "+result;
+    }
+   </script> 
+</body>
+
+</html>

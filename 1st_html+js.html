@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ht+js</title>
+</head>
+<body>
+    <!--1... <label for="">NAME</label>
+    <input type="text" id="name">
+    <input type="button" value="submit" id="btnOk" onClick="nameprint()" >
+    <br>
+    <br>
+    <textarea name="" id="showresult" cols="30" rows="2" ></textarea> -->
+    <!-- <p ></p> -->
+
+    <LABEL>NAME</LABEL>
+<input type="text" id="name">
+<!-- ondblclick="funtion   name"     -->
+
+<input type="button" value="ok" id="btnOk" onclick="nameprint()">
+<p id="namevalidation" style="color: red; font-size: 300;"></p>
+<textarea name="" id="showtext" cols="30" rows="2" ></textarea>
+
+
+
+
+
+    
+    
+
+
+    <Script>
+        let btnOk=document.getElementById('btnOk');
+        let name=document.getElementById("name");
+
+        // document.getElementById("showtext");
+        
+
+
+        //1.... let btnOk=document.getElementById('btnOk');
+
+        // function nameprint(){
+
+        //     let name=document.getElementById("name").value;
+        // document.getElementById("showresult").innerHTML="WELL-COME "+name;
+        // }
+
+    function nameprint(){
+
+        let name=document.getElementById("name").value;
+        
+        if(name.length>=5 && name.length<=12){
+            document.getElementById("namevalidation").innerHTML="good work";
+            document.getElementById("namevalidation").style.color="green";
+            document.getElementById("showtext").innerHTML="WELL-COME "+name;
+            document.getElementById("btnOk").style.visibility="visible";
+                       
+        }
+        else{
+            document.getElementById("namevalidation").innerHTML="name must be between 5 to 12 character";
+            document.getElementById("namevalidation").style.color="red";
+            document.getElementById("showtext").innerHTML="   ";
+            document.getElementById("btnOk").style.visibility="unvisible";
+        }
+
+    }
+
+        
+
+        // let x=10;
+        // let y=25;
+        // let output=x+y;
+
+        // document.getElementById(output);
+    </Script>
+</body>
+</html>
