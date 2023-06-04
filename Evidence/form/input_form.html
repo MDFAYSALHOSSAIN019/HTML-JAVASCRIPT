@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../bootstrep/bootstrap.min.css">
+    <style>
+        *{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        <form action="result_form.html">
+            <label for="">Name:</label>
+            <input type="text" id="name"><br>
+            <label for="">Father's Name:</label>
+            <input type="text" id="faname"><br>
+            <label for="">Mother's Name:</label>
+            <input type="text" id="maname"><br>
+            <label for="">E-mail</label>
+            <input type="email" id="email"><br>
+            <label for="">password</label>
+            <input type="password" id="password"><br>
+            <label for="">Gender</label>
+            <input type="radio" id="male" name="male" checked> Male
+            <input type="radio" id="female" name="male"> Female
+            <input type="radio" id="other" name="male"> other
+
+            <label for="">Chooce subject</label>
+            <select  id="select">
+                <option value="">---select one---</option>
+                <option value="">html</option>
+                <option value="">java</option>
+                <option value="">c#</option>
+                <option value="">bootstrap</option>
+                <option value="">boot</option>
+                <option value="">strap</option>
+            </select><br>
+            <button id="submit" onclick="next()">Submit</button>
+
+        </form>
+    </pre>
+    <script>
+function next(){
+
+const name=document.getElementById("name").value;
+const faname=document.getElementById("faname").value;
+const maname=document.getElementById("maname").value;
+const email=document.getElementById("email").value;
+const password=document.getElementById("password").value;
+
+let gender;
+if(document.getElementById("male").checked){
+
+    gender="Male";
+}
+else if(document.getElementById("female").checked){
+    gender="Female";
+}
+else{
+    gender="Other";
+}
+
+let sub=document.getElementById("subject");
+let subject=sub.options[sub.selectedIndex].text;
+
+localStorage.setItem("p_faname",faname);
+localStorage.setItem("p_maname",maname);
+localStorage.setItem("p_email",email);
+localStorage.setItem("p_password",password);
+localStorage.setItem("p_gender",gender);
+localStorage.setItem("p_Subject",Subject);
+
+}
+    </script>
+
+</body>
+</html>
