@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../bootstrep/bootstrap.min.css">
+    <style>
+        *{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        <form action="result_form.html">
+            <div class="form-control">
+                <label for="">Name:</label>
+                <input type="text" id="name"><br>
+                <label for="">E-mail</label>
+                <input type="email" id="email"><br>
+                <label for="">password</label>
+                <input type="password" id="password"><br>
+                <label for="">Gender</label>
+                <input type="radio" name="male" id="male" checked> Male
+                <input type="radio" name="male" id="female"> FeMale
+                <input type="radio" name="male" id="other"> other
+
+                <label for="">Chooce Subject</label>
+                <select  id="subject" class="text-center">
+                    <optiOn>--Select one---</optiOn>
+                    <optiOn>HTML</optiOn>
+                    <optiOn>JAVA</optiOn>
+                    <optiOn>BOOTSTRAP</optiOn>
+                    <optiOn>CSS##</optiOn>
+                    <optiOn>C####</optiOn>
+                    <optiOn>BANGLA</optiOn>
+                </select>
+
+                <input type="submit" value="Submit" onclick="ok()" class="btn btn-info">
+            </div>
+                
+        </form>
+    </pre>
+<script>
+    // function ok(){
+    //     const name=document.getElementById("name").value;
+    //     const email=document.getElementById("email").value;
+    //     const password=document.getElementById("password").value;
+
+    //     localStorage.setItem("name",name);
+    //     localStorage.setItem("email",email);
+    //     localStorage.setItem("password",password);
+    // }
+
+    function ok(){
+        const name=document.getElementById("name").value;
+        const email=document.getElementById("email").value;
+        const password=document.getElementById("password").value;
+        let gender;
+
+        if(document.getElementById("male").checked==true){
+            gender="male";
+        }
+        else if(document.getElementById("female").checked==true){
+            gender="female";
+        }
+        else{
+            gender="other";
+        }
+
+        let sub=document.getElementById("subject");
+        let subject=sub.options[sub.selectedIndex].text;
+
+        localStorage.setItem("s_name",name);
+        localStorage.setItem("s_email",email);
+        localStorage.setItem("s_password",password);
+        localStorage.setItem("s_gender",gender);
+        localStorage.setItem("s_subject",subject);
+    }
+</script>
+
+</body>
+</html>

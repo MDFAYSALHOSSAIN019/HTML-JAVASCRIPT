@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+<body>
+   <table callpadding="0" cellspacing="0" border="5" width="100%"  hight="100%"  aline="center">
+    <tr valine="Middle">
+        <td aline="center"><img src="../HTML/d.jpg" alt="java" name="cup" width="64" height="38"><p><a href="#" onclick="interval()">Interval</a> &nbsp;&nbsp;&nbsp;&nbsp;<a href="#" onclick="timeOut()">Timeout</a>
+
+        </td>
+    </tr>
+   </table> 
+
+   <script>
+    let cupUp=new Image();
+
+    cupUp.src="../HTML/d.jpg";
+    let cupDown=new Image()
+        cupDown.src="../HTML-JAVASCRIPT/pic_bulboff.gif";
+        let alpha;//this variavle needs to be global
+
+        function interval(){
+            alpha=window.setInterval("document.cup.sre=CupDown.src",500);
+        }
+        function timeOut(){
+            alpha=window.setTimeOut("document.cup.sre=CupUp.src",500);
+            Window.clearInterval(alpha);
+        }
+   
+   </script>
+</body>
+</html>

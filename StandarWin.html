@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../HTML/bootstrep/bootstrap.min.css">
+</head>
+<body class="bg-success">
+    <center>
+        <p>
+            <h2>Windows Control</h2>
+        </p>
+        <form action="#">
+            <input type="button" name="OpenBut" value="Click to open New Windows." onclick="GetStanWin()"> <br> <br>
+            <input type="button" name="mvbyBut" value="Click to move relative." onclick="moveRel()"> <br> <br>
+
+            <input type="button" name="mvtoBut" value="Click to move absolute." onclick="moveAbs()"> <br> <br>
+
+            <input type="button" name="shrinkBut" value="Click to change relative size." onclick="shrink()"> <br> <br>
+            <input type="button" name="shrivelBut" value="Click to change absolute size." onclick="shrivel()"> <br> <br>
+
+            
+
+        </form>
+    </center>
+
+
+
+    <script>
+        function GetStanWin(){
+            open("sampWin.html","sampWin1","toolber=no,width=200,hight=150")
+        }
+        function moveRel(){
+            moveBy(20,20)
+        }
+        function moveRel(){
+
+        }
+    </script>
+    
+</body>
+</html>
