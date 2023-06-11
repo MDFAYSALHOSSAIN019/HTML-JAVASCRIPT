@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>max</title>
+</head>
+<body>
+    <label for="">Number1 </label>
+    <input type="text" id="num1"><br><br>
+    <label for="">Number2 </label>
+    <input type="text" id="num2"><br><br>
+    <label for="">Number3</label>
+    <input type="text" id="num3"><br><br>
+    <input type="button" value="max" id="hi" onclick="btn1()">
+    <input type="button" value="min" id="ooh" onclick="btn2()"><br><br>
+    <label for="">Rasult</label><br><br>
+    <textarea name="" id="result" cols="30" rows="3"></textarea>
+
+<script>
+    let n1=20;
+    let n2=10;
+    let n3=10;
+
+    function btn1(){
+        let n1=document.getElementById("num1").value;
+        let n2=document.getElementById("num2").value;
+        let n3=document.getElementById("num3").value;
+
+        if(n1>n2 && n1>n3){
+            document.getElementById("result").innerHTML="find max number "+n1;
+        }
+        if(n2>n1 && n2>n3){
+            document.getElementById("result").innerHTML="find max number "+n2;
+        }
+        else{
+            document.getElementById("result").innerHTML="find max number "+n3;
+        }
+    }
+
+    function btn2(){
+        let n1=document.getElementById("num1").value;
+        let n2=document.getElementById("num2").value;
+        let n3=document.getElementById("num3").value;
+
+        if(n1<n2 && n1<n3){
+            document.getElementById("result").innerHTML="find min number "+n1;
+        }
+        if(n2<n1 && n2<n3){
+            document.getElementById("result").innerHTML="find min number "+n2;
+        }
+        else{
+            document.getElementById("result").innerHTML="find min number "+n3;
+        }
+    }
+
+</script>
+</body>
+</html>

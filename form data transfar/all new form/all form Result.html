@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <STyle>
+        *{
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 500;
+        }
+    </STyle>
+</head>
+
+<body>
+    <form>
+        <pre>
+        <label for="">Name</label>
+       <span id="name"></span><br>
+        <label for="">Father's Name</label>
+       <span id="fatname"></span><br>
+        <label for="">Mother's Name</label>
+        <span id="motname"></span><br>
+        <label for="">E-mail</label>
+       <span id="email"></span><br>
+        <label for="">password</label>
+       <span id="password"></span><br>
+        <label for="">Gender</label>
+        <span id="gender"></span><br>
+
+        <label for="">Choich Subject</label>
+        <span id="subject"></span><br>
+
+        <label for="">Write About your self</label>
+        <span id="text"></span><br>
+    </pre>
+    </form>
+    <script>
+         document.getElementById("name").innerHTML=localStorage.getItem("s-name");
+        document.getElementById("fatname").innerHTML=localStorage.getItem("s-fatname");
+        document.getElementById("motname").innerHTML=localStorage.getItem("s-motname");
+        document.getElementById("email").innerHTML=localStorage.getItem("s-email");
+        document.getElementById("password").innerHTML=localStorage.getItem("s-password");
+        document.getElementById("gender").innerHTML=localStorage.getItem("s-gender");
+        document.getElementById("subject").innerHTML=localStorage.getItem("s-subject");
+        document.getElementById("text").innerHTML=localStorage.getItem("s-text");
+    </script>
+</body>
+
+</html>

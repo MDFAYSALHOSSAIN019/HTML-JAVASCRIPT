@@ -11,7 +11,8 @@
 
     <Script>
         let max=0;
-        let min=9999999;
+        let min=999999;
+        let num=prompt("pleace inter your ");
 
        for(let i=1; i<=3; i++){
         let input=prompt("pleace inter your "+i);
@@ -19,11 +20,11 @@
         if(max<input){
             max=input;
         }
-        if(min<input){
+        if(min>input){
             min=input;
         }
        }
-       alert=("max number "+max " min number "+min);
+       alert("max number "+max " min number "+min);
     </Script>
     
 </body>
