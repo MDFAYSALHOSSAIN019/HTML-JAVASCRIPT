@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        <label for="">Unit Price</label>
+        <input type="text" id="product" > 
+
+        <label for="">amount</label>
+        <input type="text" id="amount" oninput="calculation()"> 
+
+        <label for="">total price</label>
+        <input type="text" id="total" > 
+
+        <label for="">Product Discount</label>
+        <input type="text" id="discount">
+
+        <!-- <input type="button" id="submit" value="payable" onclick="total()"> -->
+
+        <label for="">payable Price</label>
+        <input type="text" id="pay">
+
+     
+  <script>
+    function calculation(){
+        let price=document.getElementById("product").value;
+        let amount=document.getElementById("amount").value;
+        // let dis=document.getElementById("discount").value;
+        let total=document.getElementById("pay").value;
+        let totalamount=price*amount;
+let n1=0;
+let totalAll=0;
+
+
+        if(totalamount<=500){
+            n1=totalamount*.05;
+            totalAll=totalamount-n1;                   
+        }
+       else if(totalamount<=1000){
+            n1=totalamount*.07;
+            totalAll=totalamount-n1;                   
+        }
+        else {
+            n1=price*.075;
+            totalAll=totalamount-n1;                   
+        }
+
+        document.getElementById("total").value=totalamount;
+        document.getElementById("discount").value=n1;
+        document.getElementById("pay").value=totalAll;
+
+ 
+    }
+        
+  </script>
+
+    </pre>
+</body>
+</html>
