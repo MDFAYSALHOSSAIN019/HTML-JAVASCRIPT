@@ -8,7 +8,20 @@
 </head>
 
 <body>
+    <!-- <pre>
+        <label for="">price</label>
+        <input type="text" id="price">
 
+        <label for="">discount</label>
+        <input type="text" id="discount">
+
+        <input type="submit" value="submit" onclick="calculation()">
+
+        <label for="">payable</label> 
+       <textarea name="" id="pay" cols="30" rows="3"></textarea>
+
+    </pre>
+ -->
 
     <script>
         // // Q-1:
@@ -102,16 +115,40 @@
         // document.write("max number "+max+" min number "+min);
 
         // Q-8:
+        // let base= parseInt(prompt("input your base number"));
+        // let power=parseInt(prompt("input your power number"));
 
-        let base=parseInt(prompt("input your number"));
-        let power=parseInt(prompt("input your number"));
+        // let sum=1;
+        // for(let i=1; i<=power; i++ ){
+        //     sum=sum*base;
+        // }
+        // document.write(sum);
 
-        let sum=0;
-        for(let )
-
-        d
-
+        // Q-9:
+        let arry=[];
+        let result=0;
         
+        for(let i=1; i<=5; i++){
+            let input=parseInt(prompt("input "+i+" number"));
+            arry.push(input);
+            sum=sum+input;
+        }
+        document.write("arry number are "+arry+" sum is "+sum);
+        
+
+         // Q-10:
+        //    function calculation(){
+        //     let price= document.getElementById ("price").value;
+        //     let dis= document.getElementById ("discount").value;
+
+        //     let disco=parseInt(price)*parseInt(dis)/100;
+        //     let result=parseInt(price)-parseInt(disco);
+
+        //     document.getElementById("pay").innerHTML="payable "+result;
+
+        //    }
+                
+            
         
     </script>
 </body>
