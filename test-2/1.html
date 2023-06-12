@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+</head>
+<body>
+    <form action="result_form.html">
+        <pre>
+        <label for="">Name:</label>
+        <input type="text" id="name" name="Name  :"> 
+
+        <label for="">Contact:</label>
+        <input type="text" id="Contact" name="contact :">
+
+        <label for="">Remark</label>
+        <textarea name="" id="remark"  cols="30" rows="3"></textarea>
+
+        <label for="">Gender:</label>
+        <input type="radio" id= "male"name="gen" value="Male">Male
+        <input type="radio"id= "female" name="gen" value="Female">Female
+
+        <label for="">Subject:</label>
+        <input type="checkbox" value="NT" name="sub">NT
+        <input type="checkbox" value="IAD" name="sub">IAD
+        <input type="checkbox" value="DDD" name="sub">DDD
+        <input type="checkbox" value="ESAD" name="sub">ESAD
+
+        <label for="">Location</label>
+        <select name="Location" id="Location">
+            <option value="Banani">Banani</option>
+            <option value="Dhanmondi">Dhanmondi</option>
+            <option value="Mirpur">Mirpur</option>
+            
+        </select>
+
+        <input type="submit" value="submit" onclick="dataTransfer() ">  <input type="reset">
+
+       
+    </pre>
+       </form>
+
+       <script>
+           function dataTransfer() {
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("contact").value;
+          
+            const remark = document.getElementById("remark").value;
+           
+
+            let gender;
+
+            if (document.getElementById('male').checked == true) {
+                gender = "Male";
+            }
+            else if (document.getElementById('female').checked == true) {
+                gender = "Female";
+            }
+      
+            let loc = document.getElementById("location");
+            let location = loc.options[loc.selectedIndex].text;
+
+            let subject = [];
+            let sub = document.querySelectorAll('input[type=checkbox]:checked');
+
+            for (let i = 0; i < sub.length; i++) {
+                subject.push(sub[i].value);
+            }
+            let s_subject = subject.toString();
+
+    
+           
+            localStorage.setItem("s_name", name);
+           localStorage.setItem("s_contact",contact);
+        
+           localStorage.setItem("s_gender", gender);
+           localStorage.setItem("s_location", location);
+           localStorage.setItem("s_subject", s_subject);
+           localStorage.setItem("s_remark", remark);
+
+
+        }
+       </script>
+</body>
+</html>

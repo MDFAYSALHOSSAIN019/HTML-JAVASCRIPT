@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <label for="">Email</label>
+    <input type="text" id="email"><br><br> -->
+
+    <!-- <input type="button" value="Check" onclick="checkEmail()"> -->
+
+    <script>
+        let input=prompt("enter your email");
+        // function checkEmail() {
+            let email_text = document.getElementById('input').value;
+            const regEx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (regEx.test(email_text)) {
+                
+                alert("it is valid");
+            }
+            else {
+                alert("it is invalied");
+               
+                
+            // }
+        }
+        </script>
+</body>
+</html>

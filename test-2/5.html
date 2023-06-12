@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5</title>
+</head>
+<body>
+   <pre>
+    <label for="" >price</label>
+    <input type="text" id="price">
+    <label for="" >discount persent</label>
+    <input type="text" id="discount" oninput="calculation()">
+    <label for="" >payable price</label>
+    <input type="text" id="payable">
+   </pre>
+   <script>
+    function calculation(){
+        let price=document.getElementById("price");
+        let discount=document.getElementById("discount");
+        let result=0;
+        let dis=price*(discount/100);
+       result=price-dis;
+
+     document.getElementById("payable").value=result;
+
+
+    }
+   </script>
+</body>
+</html>

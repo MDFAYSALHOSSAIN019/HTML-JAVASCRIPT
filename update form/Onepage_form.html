@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Onepage_form</title>
+    <style>
+        *{
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 500;
+        }
+    </style>
 </head>
 <body>
     <pre>
@@ -36,38 +42,41 @@
             
         </select>
 
-        <button>Submit</button>
+       <input type="submit" value="Submit">
     </pre>
        </form>
 
 
     <script>
-        function handlesubmit(event){
-            event.preventDefult();
+        function datatransfer(event){
+            event.preventDefault();
 
-            var name=document.getElementById("name").value;
-            var contact=document.getElementById("contact").value;
-            var remark=document.getElementById("remark").value;
-            var gender=document.querySelector('input[type=radio]:checked').value;
+            const name=document.getElementById("name").value;
+            const contact=document.getElementById("Contact").value;
+            const remark=document.getElementById("remark").value;
+            const Location=document.getElementById("Location").value;
+            const gender=document.querySelector('input[type=radio]:checked').value;
+            let sub=document.querySelectorAll("input[type=checkbox]:checked");
+            let subject=["Your Sub Is: "];
+            sub.forEach(function(item){
+                subject.push(item.value);
 
-            var subject
-
-
-
-
-
-
-            var output="Name    :"+name+"<br>"
-             output  +="Contact :"+contact+"<br>"
-             output  +="remark  :"+remark+"<br>"
-             output  +="Gender  :"+name+"<br>"
+            })
 
 
-             var newWindow = window.open('', '_blank');
-            newWindow.document.write('<pre>' + output + '</pre>');
-            }
-            var form = document.getElementById('helloform');
-        form.addEventListener('submit', handleSubmit);
+            var output ="Name     :"+name+"<br>";
+                output+="Contact  :"+contact+"<br>";
+                output+="Remark   :"+remark+"<br>";
+                output+="Gender   :"+gender+"<br>";
+                output+="location :"+Location+"<br>";
+                output+="subject  :"+subject+"<br>";
+
+                var newWindow=window.open("","_blank");
+                    newWindow.document.write("<pre>"+output+"</pre>");
+
+        }
+        let form=document.getElementById("helloform");
+         form.addEventListener("submit",datatransfer);
 
     </script>
 </body>
