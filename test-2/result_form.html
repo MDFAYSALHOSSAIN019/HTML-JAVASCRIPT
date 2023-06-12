@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>result</title>
+</head>
+<body>
+    <pre>
+        Name
+        <span id="name"></span>
+
+        contact
+        <span id="contact"></span>
+
+        Gender
+        <span id="gender"></span>
+
+        Subject
+        <span id="subject"></span>
+
+       location
+        <span id="location"></span>
+
+        Remark
+        <p id="remark"></p>
+
+    </pre>
+
+    <script>
+        document.getElementById("name").innerHTML=localStorage.getItem("s_name");
+        document.getElementById("contact").innerHTML=localStorage.getItem("s_contact");
+        
+        document.getElementById("gender").innerHTML=localStorage.getItem("s_gender");
+        document.getElementById("location").innerHTML=localStorage.getItem("s_location");
+        document.getElementById("subject").innerHTML=localStorage.getItem("s_subject");
+        document.getElementById("remark").innerHTML=localStorage.getItem("s_remark");
+
+    </script>
+</body>
+</html>
