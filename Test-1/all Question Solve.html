@@ -30,6 +30,42 @@
     </pre>
 </form> -->
 
+<!-- form -->
+<!-- <form id="hello">
+        
+    <pre>
+                  Student Form
+        <label for="">Name :</label>
+        <input type="text" id="name"> 
+
+        <label for="">contact :</label>
+        <input type="text" id="contact">
+
+        <label for="">Remark :</label>
+       <textarea name="" id="remark" cols="30" rows="3"></textarea>
+
+       <label for="">Sex</label>
+       <input type="radio" name="gen" value="Male"> Male
+       <input type="radio" name="gen" value="Female"> Female
+
+       <label for="">Hobby</label>
+       <input type="checkbox" value="Travelling"> Travelling
+       <input type="checkbox" value="Writing"> Writing
+       <input type="checkbox" value="Reading"> Reading
+
+       <label for="">Subject</label>
+       <select name="" id="Subject">
+        <option value="JEE">JEE</option>
+        <option value="HTMl">HTMl</option>
+        <option value="CSS">CSS</option>
+       </select>
+
+       <input type="submit" value="Submit"> <input type="reset" value="Reset">
+
+
+    </pre>
+</form> -->
+
 
     <script>
 // // Question no-1. (1-50) count excecpt 7, 15, 23, -----------------------------
@@ -191,6 +227,78 @@
         //     document.getElementById("result").innerHTML="price after discount = "+output;
 
         // }
+            // Question no-11;prompt with validation email-------------------
+
+        // let email=prompt("Enter Email: ");
+        // let regEx= /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        
+        // if(regEx.test(email)){
+        //     alert("Email is correct");
+        // }
+    
+        //     else{
+        //         alert("Email address is worng")
+
+        //     }
+
+
+        // Question no-12. Number shorting ---------------------------
+    //     let myArr=[];
+      
+    //   for (let i=1; i<=5; i++ ){
+    //       let input=prompt("Plse neter "+i+" number: ");
+    //       myArr.push(input);
+    //   }
+      
+    //   document.write(myArr+" <br>");
+
+    //   for(let i=0; i<myArr.length-1; i++){ 
+    //       for(let j=0; j<myArr.length-i-1; j++){
+    //           if(myArr[j]>myArr[j+1]){
+    //           let temp=myArr[j];
+    //               myArr[j]=myArr[j+1];
+    //               myArr[j+1]=temp; 
+    //           }
+    //       }  
+    //   }
+
+    //   document.write(myArr);
+
+        // Question no-13. Number shorting ---------------------------
+        // function datatransfer(event){
+        //     event.preventDefault();
+
+        //     const name=document.getElementById("name").value;
+        //     const contact=document.getElementById("contact").value;
+        //     const remark=document.getElementById("remark").value;
+        //     const sex=document.querySelector('input[type=radio]:checked').value;
+        //     const ho=document.querySelectorAll('input[type=checkbox]:checked');
+        //      let hobby=[];
+        //      ho.forEach(function(item){
+        //         hobby.push(item.value);
+        //      })
+        //      const Subject=document.getElementById("Subject").value;
+
+
+
+
+        //     var output="Name :"+name+"<br>";
+        //      output +="contact :"+contact+"<br>";
+        //      output +="remark :"+remark+"<br>";
+        //      output +="sex :"+sex+"<br>";
+        //      output +="hobby :"+hobby+"<br>";
+        //      output +="Subject :"+Subject+"<br>";
+
+
+        //     var newWindow=window.open("","_blank");
+        //             newWindow.document.write("<pre>"+output+"</pre>");
+        // }
+
+        // let form=document.getElementById("hello");
+        // form.addEventListener("submit",datatransfer);
+
+
+   
         
 
     </script>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="formhello" >
+        <pre>
+            <label for="">Name :</label>
+            <input type="text" id="name"> 
+
+            <label for="">conrtact:</label>
+            <input type="text" id="contact"> 
+
+            <input type="submit" value="Submit"> 
+        </pre>
+    </form>
+    <script>
+         function datatransfer(event){
+            event.preventDefault();
+
+            const name=document.getElementById("name").value;
+            const contact=document.getElementById("contact").value;
+
+            var output="Name :"+name+"<br>";
+             output+="contact :"+contact+"<br>";
+
+             var newWindow=window.open("","_blank");
+                    newWindow.document.write("<pre>"+output+"</pre>");
+
+        }
+        let form=document.getElementById("helloform");
+         form.addEventListener("submit",datatransfer);
+    </script>
+</body>
+</html>
