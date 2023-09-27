@@ -6,33 +6,67 @@
     <title>Document</title>
 </head>
 <body>
-    <form id="formhello" >
-        <pre>
-            <label for="">Name :</label>
-            <input type="text" id="name"> 
+    <form id="hello">
+        
+    <pre>
+                  Student Form
+        <label for="">Name :</label>
+        <input type="text" id="name"> 
 
-            <label for="">conrtact:</label>
-            <input type="text" id="contact"> 
+        <label for="">contact :</label>
+        <input type="text" id="contact">
 
-            <input type="submit" value="Submit"> 
-        </pre>
-    </form>
+        <label for="">Remark :</label>
+       <textarea name="" id="remark" cols="30" rows="3"></textarea>
+
+       <label for="">Sex</label>
+       <input type="radio" name="gen" value="Male"> Male
+       <input type="radio" name="gen" value="Female"> Female
+
+       <label for="">Hobby</label>
+       <input type="checkbox" value="Travelling"> Travelling
+       <input type="checkbox" value="Writing"> Writing
+       <input type="checkbox" value="Reading"> Reading
+
+       <label for="">Subject</label>
+       <select name="" id="Subject">
+        <option value="JEE">JEE</option>
+        <option value="HTMl">HTMl</option>
+        <option value="CSS">CSS</option>
+       </select>
+
+       <input type="submit" value="Submit" id="submit"> <input type="reset" value="Reset">
+
+
+    </pre>
+</form>
     <script>
-         function datatransfer(event){
-            event.preventDefault();
+       function data(event){
+        event.preventDefault();
 
-            const name=document.getElementById("name").value;
-            const contact=document.getElementById("contact").value;
+        const name=document.getElementById("name").value;
+        const contact=document.getElementById("contact").value;
+        const remark=document.getElementById("remark").value;
+        const gender=document.querySelector('input[type=radio]:checked').value;
+        const ho=document.querySelectorAll('input[type=checkbox]:checked');
+        let hobby=[];
+        ho.forEach(function(item){
+            hobby.push(item.value);
+        }) 
+        const Subject=document.getElementById("Subject").value;  
+        var output="name :"+name+"<br>";
+           output+="contact :"+contact+"<br>";
+           output+="remark :"+remark+"<br>";
+           output+="gender :"+gender+"<br>";
+           output+="hobby :"+hobby+"<br>";
+           output+="Subject :"+Subject+"<br>";
 
-            var output="Name :"+name+"<br>";
-             output+="contact :"+contact+"<br>";
 
-             var newWindow=window.open("","_blank");
-                    newWindow.document.write("<pre>"+output+"</pre>");
-
-        }
-        let form=document.getElementById("helloform");
-         form.addEventListener("submit",datatransfer);
+        var newWindow=window.open("","_blank");
+        newWindow.document.write("<pre>"+output+"</pre>");
+       }
+       let form=document.getElementById("hello");
+       form.addEventListener("submit",data);
     </script>
 </body>
 </html>
